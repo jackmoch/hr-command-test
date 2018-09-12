@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class TestController {
 
 	@GetMapping(path = "/greeting")
-	public Object testEndpoint(@RequestParam(value = "name", defaultValue = "World") String name) {
+	public Object testEndpoint(@RequestParam(value = "name", defaultValue = "World!") String name) {
 		return new ResponseEntity(String.format("Hello, %s", name), HttpStatus.OK);
 	}
 }
